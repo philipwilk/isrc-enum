@@ -1,0 +1,8 @@
+[package]
+name = "isrc"
+version = "1.0.0"
+edition = "2021"
+
+[dependencies]
+rust_iso3166 = "0.1.12"
+# example = "1.0.0"
