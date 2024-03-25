@@ -8,7 +8,18 @@ impl TryFrom<String> for Isrc {
 
     fn try_from(value: String) -> Result<Self, Self::Error> {
         // Additional country codes for when the US got too big
-        let overflow_ccs: Vec<&'static str> = vec!["QM", "CP", "DG", "ZZ"];
+        let overflow_ccs: Vec<&'static str> = vec![
+            "QM",
+            "CP",
+            "DG",
+            "ZZ",
+            "QZ",
+            "GX",
+            "UK",
+            "KS",
+            "us",
+            "BC"
+        ];
 
         // Remove optional hyphens from code
         let code = value.trim().replace("-", "");
